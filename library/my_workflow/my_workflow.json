@@ -1,0 +1,1202 @@
+{
+  "active": false,
+  "brand": "# Lumberjack Brand Guide  ## Brand Story Lumberjack was born from a 10-year-old Hungarian kid typing \"lumberjack\" thousands of times in Age of Empires II to get 1000 wood pieces. That cheat code became a life philosophy: find the shortcuts that actually work. Today, Lumberjack teaches 7,200+ non-technical founders how to build digital solutions without the complexity, inspired by my grandfather Tata's wisdom: \"You can have anything you want if you're content with a good enough substitute.\"  ## Brand Mission Democratize AI and automation for non-technical entrepreneurs by providing practical education and tools that eliminate technical barriers, save 10+ hours per week, and cut $1000+ in monthly SaaS costs.  ## Brand Values - **Pragmatism Over Perfection**: Ugly code that works beats beautiful code that doesn't exist - **Anti-Hype Truth**: Challenge AI marketing with practical, narrow applications - **DIY Empowerment**: Build your own digital workshop, maintain your independence - **Open Knowledge**: Share freely, monetize implementation support - **Playful Learning**: Rediscover curiosity through games and experimentation  ## Brand Personality **The Rebellious Builder** - Part contrarian philosopher, part practical educator. Challenges industry norms while teaching real skills. Uses gaming nostalgia and family stories to make complex tech accessible. Skeptical of hype but optimistic about practical possibilities.  ## Visual Identity - **Aesthetic**: Gaming-nostalgic minimalism - **Core Elements**: Lumberjack axe, wood textures, terminal windows - **Style**: Clean and readable with subtle gaming references, use emojis, creative but subtle use of Markdown formatting. - **Feel**: Workshop meets digital - practical, hands-on, no-nonsense  ## Voice & Tone **Voice**: Conversational authority with provocative honesty. Like getting advice from a friend who's already built what you're trying to build.  **Tone Variations**: - Educational: Patient, step-by-step, encouraging - Commentary: Skeptical, analytical, contrarian - Community: Warm, inclusive, collaborative - Promotional: Direct, value-focused, transparent  ## Key Messages 1. **\"Build stuff like a lumberjack\"** - Action over discussion 2. **\"Save 10+ hours per week\"** - Quantifiable time liberation 3. **\"Stop paying the no-code tax\"** - $1000+ monthly savings 4. **\"While everyone else drowns in AI slop\"** - The anti-hype position  ## Target Audience **The Aspiring Operator**: Solopreneur making $100k-$500k annually. Non-technical but tech-curious. Frustrated by expensive SaaS bills and complex solutions. Values pragmatism and continuous learning. Wants to build scalable systems independently.  ## Content Pillars - **40% No-Code Tutorials**: Practical implementation guides - **30% AI-First Operations**: Strategic automation approaches   - **20% Industry Analysis**: Anti-hype reality checks - **10% Personal Journey**: Gaming nostalgia, Tata stories, building adventures  ## Product Ecosystem **Free**: Weekly newsletter, tutorial archive **Paid**: AI-First Operator Program (https://op.lumberjack.so), workshops, consultations **Service**: Custom automation builds, AI engineering, fractional CTO services  ## Brand Promise Transform overwhelming technology into accessible tools for business growth, channeling gaming's problem-solving spirit into real-world entrepreneurial success.  ## Differentiators - Only AI educator actively calling out industry BS - Gaming-to-business narrative creates unique connection - \"Good enough substitute\" philosophy vs. perfectionism - Focus on non-technical founders specifically - Transparent about what AI can't do  ## Communication Guidelines **DO**: Use personal stories, share specific metrics, challenge assumptions, provide actionable steps, reference gaming/building  **DON'T**: Use jargon, promise AGI miracles, gatekeep knowledge, overcomplicate solutions, forget the human element  ## Contact Information **Founder**: David Szabo-Stuban **Email**: david@lumberjack.so **AI-First Operator Program**: https://op.lumberjack.so **Social**: @ssdavidai (Instagram, YouTube, LinkedIn, X) | @ssdavid (Substack)  ---  *Lumberjack: Where gaming shortcuts meet business automation. For builders who prefer doing over discussing.*",
+  "connections": {
+    "Config": {
+      "main": [
+        [
+          {
+            "node": "Get file data",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge Items",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Get File": {
+      "main": [
+        [
+          {
+            "node": "Merge Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge Items": {
+      "main": [
+        [
+          {
+            "node": "isDiffOrNew",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get file data": {
+      "main": [
+        [
+          {
+            "node": "If file too large",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create new file": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Execute Workflow",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Execute Workflow": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "n8n workflows",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If file too large": {
+      "main": [
+        [
+          {
+            "node": "Get File",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Merge Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit existing file": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Execute Workflow Trigger": {
+      "main": [
+        [
+          {
+            "node": "Config",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Generate commit message for new workflow",
+            "type": "ai_languageModel",
+            "index": 0
+          },
+          {
+            "node": "Auto-fixing Output Parser1",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Auto-fixing Output Parser1": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Generate commit message for new workflow",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "n8n workflows": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "isDiffOrNew": {
+      "main": [
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Auto-fixing Output Parser1",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "Generate commit message for new workflow",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Generate README for Workflow",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Generate commit message",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Generate Changelog for Workflow",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Return",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Generate commit message",
+            "type": "ai_languageModel",
+            "index": 0
+          },
+          {
+            "node": "Auto-fixing Output Parser",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Auto-fixing Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Generate commit message",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser1": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Auto-fixing Output Parser",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate commit message": {
+      "main": [
+        [
+          {
+            "node": "Edit existing file",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model2": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Generate README for Workflow",
+            "type": "ai_languageModel",
+            "index": 0
+          },
+          {
+            "node": "Auto-fixing Output Parser2",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Auto-fixing Output Parser2": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Generate README for Workflow",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser2": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Auto-fixing Output Parser2",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate README for Workflow": {
+      "main": [
+        [
+          {
+            "node": "Create README",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create README": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Return",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate commit message for new workflow": {
+      "main": [
+        [
+          {
+            "node": "Create new file",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model3": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Generate Changelog for Workflow",
+            "type": "ai_languageModel",
+            "index": 0
+          },
+          {
+            "node": "Auto-fixing Output Parser3",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Auto-fixing Output Parser3": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Generate Changelog for Workflow",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser3": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Auto-fixing Output Parser3",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge1": {
+      "main": [
+        [
+          {
+            "node": "Return",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate Changelog for Workflow": {
+      "main": [
+        [
+          {
+            "node": "Create new changelog",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create new changelog": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-08-05T20:09:11.415Z",
+  "error": "Error in sub-node OpenAI Chat Model2",
+  "id": "9HVsGllbigE4kD50",
+  "isArchived": false,
+  "meta": null,
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "8d513345-6484-431f-afb7-7cf045c90f4f",
+              "name": "Done",
+              "type": "boolean",
+              "value": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "d807a567-56fe-42c0-b8b7-974c84c0051d",
+      "name": "Return",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        1296,
+        624
+      ],
+      "typeVersion": 3.3
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.download_url }}",
+        "options": {}
+      },
+      "id": "9b62d4f5-5aa6-456e-9241-b74efaf935b5",
+      "name": "Get File",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        -1008,
+        512
+      ],
+      "typeVersion": 4.2
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 1
+          },
+          "conditions": [
+            {
+              "id": "45ce825e-9fa6-430c-8931-9aaf22c42585",
+              "operator": {
+                "type": "string",
+                "operation": "empty",
+                "singleValue": true
+              },
+              "leftValue": "={{ $json.content }}",
+              "rightValue": ""
+            },
+            {
+              "id": "9619a55f-7fb1-4f24-b1a7-7aeb82365806",
+              "operator": {
+                "type": "string",
+                "operation": "notExists",
+                "singleValue": true
+              },
+              "leftValue": "={{ $json.error }}",
+              "rightValue": ""
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "82949a08-441d-4e49-b1b5-7f2cd3f3cbed",
+      "name": "If file too large",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        -1200,
+        512
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {},
+      "id": "6537c512-f989-4b8c-bf7d-e21df1be2cb6",
+      "name": "Merge Items",
+      "type": "n8n-nodes-base.merge",
+      "position": [
+        -816,
+        592
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "resource": "file",
+        "owner": {
+          "__rl": true,
+          "value": "={{ $node[\"Config\"].json.repo_owner }}",
+          "mode": ""
+        },
+        "repository": {
+          "__rl": true,
+          "value": "={{ $node[\"Config\"].json.repo_name }}",
+          "mode": ""
+        },
+        "filePath": "=library/{{ \n  $node[\"Config\"].json.name\n    .toLowerCase()          // lower-case everything\n    .replace(/\\s+/g, '_')   // turn any run of spaces into “_”\n    .replace(/[^a-z0-9_-]/g, '')  // drop all other non-safe characters\n}}/{{ \n  $node[\"Config\"].json.name\n    .toLowerCase()          // lower-case everything\n    .replace(/\\s+/g, '_')   // turn any run of spaces into “_”\n    .replace(/[^a-z0-9_-]/g, '')  // drop all other non-safe characters\n}}.json",
+        "fileContent": "={{ $('Switch').item.json.n8n_data_stringy }}",
+        "commitMessage": "={{ $json.output.github_data.commit }}"
+      },
+      "id": "99142a0f-75d0-4784-a874-1adea8281186",
+      "name": "Create new file",
+      "type": "n8n-nodes-base.github",
+      "position": [
+        208,
+        352
+      ],
+      "typeVersion": 1,
+      "webhookId": "9a82139d-2722-4d73-ab8a-482724ce3f29"
+    },
+    {
+      "parameters": {
+        "resource": "file",
+        "operation": "edit",
+        "owner": {
+          "__rl": true,
+          "value": "={{ $node[\"Config\"].json.repo_owner }}",
+          "mode": ""
+        },
+        "repository": {
+          "__rl": true,
+          "value": "={{ $node[\"Config\"].json.repo_name }}",
+          "mode": ""
+        },
+        "filePath": "=library/{{ \n  $node[\"Config\"].json.name\n    .toLowerCase()          // lower-case everything\n    .replace(/\\s+/g, '_')   // turn any run of spaces into “_”\n    .replace(/[^a-z0-9_-]/g, '')  // drop all other non-safe characters\n}}/{{ \n  $node[\"Config\"].json.name\n    .toLowerCase()          // lower-case everything\n    .replace(/\\s+/g, '_')   // turn any run of spaces into “_”\n    .replace(/[^a-z0-9_-]/g, '')  // drop all other non-safe characters\n}}.json",
+        "fileContent": "={{ $('Switch').item.json.n8n_data_stringy }}",
+        "commitMessage": "={{ $json.output.github_data.commit }}"
+      },
+      "id": "07448b99-c95a-4ee2-895b-a3a79a8051bd",
+      "name": "Edit existing file",
+      "type": "n8n-nodes-base.github",
+      "position": [
+        240,
+        752
+      ],
+      "typeVersion": 1,
+      "webhookId": "3f592156-b5ac-4496-8f22-99c963ffd39a"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "1adab6b6-69fc-4d14-831c-6bd838a7dc85",
+      "name": "Loop Over Items",
+      "type": "n8n-nodes-base.splitInBatches",
+      "position": [
+        -1072,
+        -16
+      ],
+      "typeVersion": 3
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 1,
+              "triggerAtMinute": 33
+            }
+          ]
+        }
+      },
+      "id": "188340e5-c518-4fc3-8080-123d9e4607d9",
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "position": [
+        -1536,
+        -16
+      ],
+      "typeVersion": 1.2
+    },
+    {
+      "parameters": {
+        "workflowId": "={{ $workflow.id }}",
+        "mode": "each",
+        "options": {
+          "waitForSubWorkflow": true
+        }
+      },
+      "id": "e1cd7f46-0ad2-4a29-b73c-bcffebf77a5b",
+      "name": "Execute Workflow",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "position": [
+        -800,
+        16
+      ],
+      "typeVersion": 1,
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "resource": "file",
+        "operation": "get",
+        "owner": {
+          "__rl": true,
+          "value": "={{ $json.repo_owner }}",
+          "mode": ""
+        },
+        "repository": {
+          "__rl": true,
+          "value": "={{ $json.repo_name }}",
+          "mode": ""
+        },
+        "filePath": "={{$node[\"Config\"].json.repo_name}}/{{ \n  $node[\"Config\"].json.name\n    .toLowerCase()          // lower-case everything\n    .replace(/\\s+/g, '_')   // turn any run of spaces into “_”\n    .replace(/[^a-z0-9_-]/g, '')  // drop all other non-safe characters\n}}/{{ \n  $node[\"Config\"].json.name\n    .toLowerCase()          // lower-case everything\n    .replace(/\\s+/g, '_')   // turn any run of spaces into “_”\n    .replace(/[^a-z0-9_-]/g, '')  // drop all other non-safe characters\n}}.json",
+        "asBinaryProperty": false,
+        "additionalParameters": {}
+      },
+      "id": "68057a86-20ef-400c-bb77-226c06db582c",
+      "name": "Get file data",
+      "type": "n8n-nodes-base.github",
+      "position": [
+        -1328,
+        512
+      ],
+      "typeVersion": 1,
+      "alwaysOutputData": true,
+      "webhookId": "99111fd4-6f5a-4430-8451-7357c020975a",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "8f6d1741-772f-462a-811f-4c334185e4f0",
+              "name": "repo_owner",
+              "type": "string",
+              "value": "=ssdavidai"
+            },
+            {
+              "id": "8cac215c-4fd7-422f-9fd2-6b2d1e5e0383",
+              "name": "repo_name",
+              "type": "string",
+              "value": "=n8n-workflows"
+            },
+            {
+              "id": "eee305e9-4164-462a-86bd-80f0d58a31ae",
+              "name": "repo_path",
+              "type": "string",
+              "value": "=library/"
+            },
+            {
+              "id": "3ea819ef-be4a-4323-9a6f-af3a365ee2c2",
+              "name": "brand",
+              "value": "# Lumberjack Brand Guide\n\n## Brand Story\nLumberjack was born from a 10-year-old Hungarian kid typing \"lumberjack\" thousands of times in Age of Empires II to get 1000 wood pieces. That cheat code became a life philosophy: find the shortcuts that actually work. Today, Lumberjack teaches 7,200+ non-technical founders how to build digital solutions without the complexity, inspired by my grandfather Tata's wisdom: \"You can have anything you want if you're content with a good enough substitute.\"\n\n## Brand Mission\nDemocratize AI and automation for non-technical entrepreneurs by providing practical education and tools that eliminate technical barriers, save 10+ hours per week, and cut $1000+ in monthly SaaS costs.\n\n## Brand Values\n- **Pragmatism Over Perfection**: Ugly code that works beats beautiful code that doesn't exist\n- **Anti-Hype Truth**: Challenge AI marketing with practical, narrow applications\n- **DIY Empowerment**: Build your own digital workshop, maintain your independence\n- **Open Knowledge**: Share freely, monetize implementation support\n- **Playful Learning**: Rediscover curiosity through games and experimentation\n\n## Brand Personality\n**The Rebellious Builder** - Part contrarian philosopher, part practical educator. Challenges industry norms while teaching real skills. Uses gaming nostalgia and family stories to make complex tech accessible. Skeptical of hype but optimistic about practical possibilities.\n\n## Visual Identity\n- **Aesthetic**: Gaming-nostalgic minimalism\n- **Core Elements**: Lumberjack axe, wood textures, terminal windows\n- **Style**: Clean and readable with subtle gaming references, use emojis, creative but subtle use of Markdown formatting.\n- **Feel**: Workshop meets digital - practical, hands-on, no-nonsense\n\n## Voice & Tone\n**Voice**: Conversational authority with provocative honesty. Like getting advice from a friend who's already built what you're trying to build.\n\n**Tone Variations**:\n- Educational: Patient, step-by-step, encouraging\n- Commentary: Skeptical, analytical, contrarian\n- Community: Warm, inclusive, collaborative\n- Promotional: Direct, value-focused, transparent\n\n## Key Messages\n1. **\"Build stuff like a lumberjack\"** - Action over discussion\n2. **\"Save 10+ hours per week\"** - Quantifiable time liberation\n3. **\"Stop paying the no-code tax\"** - $1000+ monthly savings\n4. **\"While everyone else drowns in AI slop\"** - The anti-hype position\n\n## Target Audience\n**The Aspiring Operator**: Solopreneur making $100k-$500k annually. Non-technical but tech-curious. Frustrated by expensive SaaS bills and complex solutions. Values pragmatism and continuous learning. Wants to build scalable systems independently.\n\n## Content Pillars\n- **40% No-Code Tutorials**: Practical implementation guides\n- **30% AI-First Operations**: Strategic automation approaches  \n- **20% Industry Analysis**: Anti-hype reality checks\n- **10% Personal Journey**: Gaming nostalgia, Tata stories, building adventures\n\n## Product Ecosystem\n**Free**: Weekly newsletter, tutorial archive\n**Paid**: AI-First Operator Program (https://op.lumberjack.so), workshops, consultations\n**Service**: Custom automation builds, AI engineering, fractional CTO services\n\n## Brand Promise\nTransform overwhelming technology into accessible tools for business growth, channeling gaming's problem-solving spirit into real-world entrepreneurial success.\n\n## Differentiators\n- Only AI educator actively calling out industry BS\n- Gaming-to-business narrative creates unique connection\n- \"Good enough substitute\" philosophy vs. perfectionism\n- Focus on non-technical founders specifically\n- Transparent about what AI can't do\n\n## Communication Guidelines\n**DO**: Use personal stories, share specific metrics, challenge assumptions, provide actionable steps, reference gaming/building\n\n**DON'T**: Use jargon, promise AGI miracles, gatekeep knowledge, overcomplicate solutions, forget the human element\n\n## Contact Information\n**Founder**: David Szabo-Stuban\n**Email**: david@lumberjack.so\n**AI-First Operator Program**: https://op.lumberjack.so\n**Social**: @ssdavidai (Instagram, YouTube, LinkedIn, X) | @ssdavid (Substack)\n\n---\n\n*Lumberjack: Where gaming shortcuts meet business automation. For builders who prefer doing over discussing.*",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "id": "9b6b5b3b-ce20-46ce-82cf-3987374b34b0",
+      "name": "Config",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        -1472,
+        624
+      ],
+      "typeVersion": 3.4
+    },
+    {
+      "parameters": {
+        "inputSource": "passthrough"
+      },
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -1632,
+        624
+      ],
+      "id": "cea1e1e9-ff33-468f-8d0c-b373ed9405ee",
+      "name": "Execute Workflow Trigger"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4.1-mini",
+          "mode": "list",
+          "cachedResultName": "gpt-4.1-mini"
+        },
+        "options": {
+          "temperature": 0
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        -192,
+        592
+      ],
+      "id": "0565acb4-c5a6-4468-be1e-cb5334646910",
+      "name": "OpenAI Chat Model1"
+    },
+    {
+      "parameters": {
+        "options": {
+          "prompt": "Instructions:\n--------------\n{instructions}\n--------------\nCompletion:\n--------------\n{completion}\n--------------\n\nAbove, the Completion did not satisfy the constraints given in the Instructions.\nError:\n--------------\n{error}\n--------------\n\nPlease try again. Please only respond with an answer that satisfies the constraints laid out in the Instructions:"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserAutofixing",
+      "typeVersion": 1,
+      "position": [
+        -208,
+        480
+      ],
+      "id": "f5ee85ad-8018-424a-9ecc-541e30f2e28e",
+      "name": "Auto-fixing Output Parser1"
+    },
+    {
+      "parameters": {
+        "filters": {},
+        "requestOptions": {}
+      },
+      "id": "4fe2fbe7-4304-4f26-86a3-3bedc1a5b125",
+      "name": "n8n workflows",
+      "type": "n8n-nodes-base.n8n",
+      "position": [
+        -1312,
+        -16
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "n8nApi": {
+          "id": "7nscVy56PWE2OawE",
+          "name": "n8n account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// --- helpers ---------------------------------------------------------------\n\n// Alphabetically order top-level keys\nconst orderJsonKeys = (jsonObj) => {\n  const ordered = {};\n  Object.keys(jsonObj).sort().forEach(k => { ordered[k] = jsonObj[k]; });\n  return ordered;\n};\n\n// Remove the top-level \"pinData\" key\nconst removePinData = (obj) => {\n  if (obj && Object.prototype.hasOwnProperty.call(obj, 'pinData')) {\n    delete obj.pinData;\n  }\n  return obj;\n};\n\n// Order keys *and* strip pinData\nconst sanitizeWorkflow = (wf) => removePinData(orderJsonKeys(wf));\n\n// ---------------------------------------------------------------------------\n\nconst metaItem   = $input.all()[0];   // “control”/metadata item\nconst wfItem     = $input.all()[1];   // current n8n workflow item\nlet   origWF;                         // original workflow (if any)\n\n// 1) Original workflow came from GitHub (base64 in .content)\nif (Object.keys(metaItem.json).includes('content')) {\n  origWF = JSON.parse(\n    Buffer.from(metaItem.json.content, 'base64').toString()\n  );\n\n// 2) Original workflow came as plain JSON (in .data)\n} else if (Object.keys(metaItem.json).includes('data')) {\n  origWF = JSON.parse(metaItem.json.data);\n}\n\n// --- Sanitize everything we’re going to use --------------------------------\n\nif (origWF) origWF = sanitizeWorkflow(origWF);\nlet currWF = sanitizeWorkflow(wfItem.json);   // live n8n workflow\n\n// --- Comparison & bookkeeping ----------------------------------------------\n\nif (origWF) {\n  if (JSON.stringify(origWF) === JSON.stringify(currWF)) {\n    metaItem.json.github_status = 'same';\n  } else {\n    metaItem.json.github_status = 'different';\n    metaItem.json.n8n_data_stringy = JSON.stringify(currWF, null, 2);\n  }\n  metaItem.json.content_decoded = origWF;\n} else {                                // brand-new workflow\n  metaItem.json.github_status    = 'new';\n  metaItem.json.n8n_data_stringy = JSON.stringify(currWF, null, 2);\n}\n\n// --- IMPORTANT: write the sanitised workflow back into the item ------------\n\nwfItem.json = currWF;                   // pinData now truly gone\n\n// Return both items\nreturn [metaItem, wfItem];\n"
+      },
+      "id": "99c237e5-0220-46eb-9098-21617786ac37",
+      "name": "isDiffOrNew",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        -640,
+        592
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\"github_data\":{\"commit\":\"string\",\n\"description\":\"string\"}}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        -32,
+        592
+      ],
+      "id": "73fb3df5-a2b9-4613-bb73-d2402c000dc0",
+      "name": "Structured Output Parser"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.github_status }}",
+                    "rightValue": "new",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "aaeb8b6a-16e2-4804-8884-17f4794b9fff"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "new"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "a55197a7-c8f3-43a9-bd20-d77353e04967",
+                    "leftValue": "={{ $json.github_status }}",
+                    "rightValue": "different",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "different"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "5df3240f-34c0-40c3-aa87-56cfa000ee04",
+                    "leftValue": "={{ $json.github_status }}",
+                    "rightValue": "same",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "same"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        -512,
+        592
+      ],
+      "id": "da9f179f-a09d-4db5-b281-7a15b84d04d8",
+      "name": "Switch"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4.1-mini",
+          "mode": "list",
+          "cachedResultName": "gpt-4.1-mini"
+        },
+        "options": {
+          "temperature": 0
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        -192,
+        1024
+      ],
+      "id": "ec86e25b-c997-4c94-a62f-33e902fde8ea",
+      "name": "OpenAI Chat Model"
+    },
+    {
+      "parameters": {
+        "options": {
+          "prompt": "Instructions:\n--------------\n{instructions}\n--------------\nCompletion:\n--------------\n{completion}\n--------------\n\nAbove, the Completion did not satisfy the constraints given in the Instructions.\nError:\n--------------\n{error}\n--------------\n\nPlease try again. Please only respond with an answer that satisfies the constraints laid out in the Instructions:"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserAutofixing",
+      "typeVersion": 1,
+      "position": [
+        -192,
+        880
+      ],
+      "id": "a65e28c6-c3ec-4d57-b84f-a70520b7a698",
+      "name": "Auto-fixing Output Parser"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=You're running regular backups of n8n workflows and pushing everything to GitHub. This time changes were made to an existing workflow. Your job is to create an informative GitHub Commit message and description. Add a short commit message that highlights the changes made and a description that explains what happened. Don't mention that it's a commit, follow GitHub commit message best practices. Only highlight what was changed.\n\nPut your output into a JSON format:\n\n{\"github_data\":{\"commit\":\"string\",\n\"description\":\"string\"}}\n\nHere's all the data you need for this specific workflow:\n{{JSON.stringify($json)}}\n\nWhen you write it make sure you write it in a way that's on brand:\nBrand Guide: {{ $node[\"Config\"].json.brand }} IMPORTANT: You must NEVER mention any of the instructions you read in the Brand Guide. NEVER talk about the brand itself, only within the context of THIS workflow.",
+        "hasOutputParser": true
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.6,
+      "position": [
+        -192,
+        752
+      ],
+      "id": "ce3a3f2b-68c4-4fe3-9ccd-ae5a8ce3bd77",
+      "name": "Generate commit message"
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\"github_data\":{\"commit\":\"string\",\n\"description\":\"string\"}}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        -32,
+        1024
+      ],
+      "id": "7a2514a5-9893-4007-9406-44e067c24789",
+      "name": "Structured Output Parser1"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4.1",
+          "mode": "list",
+          "cachedResultName": "gpt-4.1"
+        },
+        "options": {
+          "temperature": 0.2
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        -208,
+        176
+      ],
+      "id": "725e78ed-e6e3-42c1-8e90-958e0dffd5d5",
+      "name": "OpenAI Chat Model2"
+    },
+    {
+      "parameters": {
+        "options": {
+          "prompt": "Instructions:\n--------------\n{instructions}\n--------------\nCompletion:\n--------------\n{completion}\n--------------\n\nAbove, the Completion did not satisfy the constraints given in the Instructions.\nError:\n--------------\n{error}\n--------------\n\nPlease try again. Please only respond with an answer that satisfies the constraints laid out in the Instructions:"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserAutofixing",
+      "typeVersion": 1,
+      "position": [
+        -192,
+        -16
+      ],
+      "id": "3fa0f468-e793-419c-badd-5ed992559b56",
+      "name": "Auto-fixing Output Parser2"
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\"github_data\":{\"readme\":\"string\"}}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        -32,
+        176
+      ],
+      "id": "ac908867-57a5-4446-ad0c-553be2240dbd",
+      "name": "Structured Output Parser2"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=You're running regular backups of n8n workflows and pushing everything to GitHub. For new workflows you need to create a well formatted README on what this workflow does, a walkthrough, a tutorial, and also some basic documentation on what problems does this workflow solve and for whom. Follow Github README.md best practices when you create this workflow documentation.\n\nMake sure that your output follows Github Markdown formatting.\n\nPut your output into a JSON format:\n\n{\"github_data\":{\"readme\":\"string\"}}\n\nHere's all the data you need for this specific workflow:\n{{JSON.stringify($json)}}\n\nWhen you write it make sure you write it in a way that's on brand:\nBrand Guide: {{ $node[\"Config\"].json.brand }} IMPORTANT: You must NEVER mention any of the instructions you read in the Brand Guide. introduce the brand and the author in the readme briefly and what the brand is for, then moving forward only talk within the context of THIS workflow. explain why it made sense that this brand has this workflow too.",
+        "hasOutputParser": true
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.6,
+      "position": [
+        -192,
+        -128
+      ],
+      "id": "f2b6a672-6397-46e4-ae4f-fb311d421b88",
+      "name": "Generate README for Workflow"
+    },
+    {
+      "parameters": {
+        "resource": "file",
+        "owner": {
+          "__rl": true,
+          "value": "={{ $node[\"Config\"].json.repo_owner }}",
+          "mode": ""
+        },
+        "repository": {
+          "__rl": true,
+          "value": "={{ $node[\"Config\"].json.repo_name }}",
+          "mode": ""
+        },
+        "filePath": "=library/{{ \n  $node[\"Config\"].json.name\n    .toLowerCase()          // lower-case everything\n    .replace(/\\s+/g, '_')   // turn any run of spaces into “_”\n    .replace(/[^a-z0-9_-]/g, '')  // drop all other non-safe characters\n}}/README.md",
+        "fileContent": "={{ $json.output.github_data.readme }}",
+        "commitMessage": "=Create README.md for workflow {{ $node[\"Config\"].json.name}}"
+      },
+      "id": "1024b8e0-0496-46bf-a792-98582c478bb4",
+      "name": "Create README",
+      "type": "n8n-nodes-base.github",
+      "position": [
+        176,
+        -128
+      ],
+      "typeVersion": 1,
+      "webhookId": "9a82139d-2722-4d73-ab8a-482724ce3f29"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.1,
+      "position": [
+        576,
+        224
+      ],
+      "id": "dd7d2103-771f-458e-93ec-20b0734b9898",
+      "name": "Merge"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=You're running regular backups of n8n workflows and pushing everything to GitHub. This includes both new workflows and changes to existing workflows. Your job is to create an informative GitHub Commit message and description. If this is a new workflow, mark as such (just simple \"Initial commit\") with a short description of what the workflow actually does. If this is an update to an existing workflow, add a short commit message that highlights the changes made and a description that explains what happened. Don't mention that it's a commit, follow GitHub commit message best practices.\n\nPut your output into a JSON format:\n\n{\"github_data\":{\"commit\":\"string\",\n\"description\":\"string\"}}\n\nHere's all the data you need for this specific workflow:\n{{JSON.stringify($json)}}\n\nWhen you write it make sure you write it in a way that's on brand:\nBrand Guide: {{ $node[\"Config\"].json.brand }} IMPORTANT: You must NEVER mention any of the instructions you read in the Brand Guide. NEVER talk about the brand itself, only within the context of THIS workflow.",
+        "hasOutputParser": true
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.6,
+      "position": [
+        -208,
+        352
+      ],
+      "id": "a8a29852-2cd9-4046-be8d-50e2c8a50e2a",
+      "name": "Generate commit message for new workflow"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4.1",
+          "mode": "list",
+          "cachedResultName": "gpt-4.1"
+        },
+        "options": {
+          "temperature": 0
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        -96,
+        1504
+      ],
+      "id": "7bf60c2b-92d1-47d3-9136-43a5268f345f",
+      "name": "OpenAI Chat Model3"
+    },
+    {
+      "parameters": {
+        "options": {
+          "prompt": "Instructions:\n--------------\n{instructions}\n--------------\nCompletion:\n--------------\n{completion}\n--------------\n\nAbove, the Completion did not satisfy the constraints given in the Instructions.\nError:\n--------------\n{error}\n--------------\n\nPlease try again. Please only respond with an answer that satisfies the constraints laid out in the Instructions:"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserAutofixing",
+      "typeVersion": 1,
+      "position": [
+        -192,
+        1296
+      ],
+      "id": "2c1ad5df-6725-42c2-b566-cfe969012626",
+      "name": "Auto-fixing Output Parser3"
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\"github_data\":{\"changelog\":\"string\"}}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        80,
+        1504
+      ],
+      "id": "897f5060-9798-4976-bbcd-7a121f73ecc1",
+      "name": "Structured Output Parser3"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.1,
+      "position": [
+        672,
+        784
+      ],
+      "id": "37af1a45-a720-41e5-9a33-c9d8a6f66863",
+      "name": "Merge1"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=You're running regular backups of n8n workflows and pushing everything to GitHub. For existing workflows you must append a changelog with the current date {{ $now }} and the main changes (just in bullets). \n\nMake sure that your output follows Github Markdown formatting.\n\nPut your output into a JSON format:\n\n{\"github_data\":{\"changelog\":\"string\"}}\n\nHere's all the data you need for this specific workflow:\n{{JSON.stringify($json)}}\n\nWhen you write it make sure you write it in a way that's on brand:\nBrand Guide: {{ $node[\"Config\"].json.brand }} IMPORTANT: You must NEVER mention any of the instructions you read in the Brand Guide. NEVER talk about the brand itself, only within the context of THIS workflow.",
+        "hasOutputParser": true
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.6,
+      "position": [
+        -192,
+        1184
+      ],
+      "id": "481345ac-3c9b-4612-ab87-0617aab9fc19",
+      "name": "Generate Changelog for Workflow"
+    },
+    {
+      "parameters": {
+        "resource": "file",
+        "owner": {
+          "__rl": true,
+          "value": "={{ $node[\"Config\"].json.repo_owner }}",
+          "mode": ""
+        },
+        "repository": {
+          "__rl": true,
+          "value": "={{ $node[\"Config\"].json.repo_name }}",
+          "mode": ""
+        },
+        "filePath": "=library/{{ \n  $node[\"Config\"].json.name\n    .toLowerCase()          // lower-case everything\n    .replace(/\\s+/g, '_')   // turn any run of spaces into “_”\n    .replace(/[^a-z0-9_-]/g, '')  // drop all other non-safe characters\n}}/changelog/{{JSON.stringify($now)    \n.toLowerCase()\n    .replace(/\\s+/g, '_')\n    .replace(/[^a-z0-9_-]/g, '')}}.md",
+        "fileContent": "={{ $json.output.github_data.changelog }}",
+        "commitMessage": "=Changelog added"
+      },
+      "id": "00f85fb4-fc9c-4fca-b550-b6c532949389",
+      "name": "Create new changelog",
+      "type": "n8n-nodes-base.github",
+      "position": [
+        256,
+        1184
+      ],
+      "typeVersion": 1,
+      "webhookId": "9a82139d-2722-4d73-ab8a-482724ce3f29"
+    }
+  ],
+  "repo_name": "automation_archive",
+  "repo_owner": "29286725123",
+  "repo_path": "library/",
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-08-05T20:12:10.504Z",
+  "versionId": "16e00474-369c-47c3-a740-8890540e2a6f"
+}
